@@ -3,27 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>ShadowForge1137 · Cyber Security</title>
+    <title>ShadowForge1137 · Cyber Security Researcher</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Inter', sans-serif;
-            background: #050508;
-            color: #e8e8e8;
+            background: #05080c;
+            color: #e8edf2;
             overflow-x: hidden;
+            line-height: 1.6;
         }
         
         .bg-layer {
@@ -33,7 +26,7 @@
             width: 100%;
             height: 100%;
             z-index: 0;
-            background: radial-gradient(ellipse at 30% 20%, #0a0a1a, #050508);
+            background: radial-gradient(ellipse at 30% 20%, #1a0a0a, #05080c);
         }
         
         .stars {
@@ -47,14 +40,14 @@
         }
         .star {
             position: absolute;
-            background: white;
+            background: rgba(255,255,255,0.6);
             border-radius: 50%;
             opacity: 0;
-            animation: twinkle 3s infinite alternate;
+            animation: twinkle 4s infinite alternate;
         }
         @keyframes twinkle {
             0% { opacity: 0.1; transform: scale(0.8); }
-            100% { opacity: 1; transform: scale(1.2); }
+            100% { opacity: 0.7; transform: scale(1.2); }
         }
         
         .grid-overlay {
@@ -65,9 +58,9 @@
             height: 100%;
             z-index: 0;
             background-image: 
-                linear-gradient(rgba(99,102,241,0.02) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(99,102,241,0.02) 1px, transparent 1px);
-            background-size: 60px 60px;
+                linear-gradient(rgba(220,38,38,0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(220,38,38,0.015) 1px, transparent 1px);
+            background-size: 80px 80px;
             pointer-events: none;
             mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
         }
@@ -77,27 +70,27 @@
             border-radius: 50%;
             pointer-events: none;
             z-index: 0;
-            animation: float 25s infinite ease-in-out;
+            animation: float 30s infinite ease-in-out;
         }
         .orb-1 {
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(99,102,241,0.05), transparent);
-            top: -200px;
-            right: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(220,38,38,0.04), transparent);
+            top: -300px;
+            right: -300px;
             animation-delay: 0s;
         }
         .orb-2 {
-            width: 350px;
-            height: 350px;
-            background: radial-gradient(circle, rgba(168,85,247,0.04), transparent);
-            bottom: -100px;
-            left: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(239,68,68,0.03), transparent);
+            bottom: -200px;
+            left: -200px;
             animation-delay: 3s;
         }
         @keyframes float {
             0%, 100% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(60px, -40px) scale(1.1); }
+            50% { transform: translate(80px, -50px) scale(1.1); }
         }
         
         .scroll-progress {
@@ -106,7 +99,7 @@
             left: 0;
             width: 0%;
             height: 2px;
-            background: linear-gradient(90deg, #6366f1, #a78bfa, #fbbf24);
+            background: linear-gradient(90deg, #dc2626, #ef4444, #f97316);
             z-index: 100;
             transition: width 0.1s;
         }
@@ -114,7 +107,7 @@
         .container {
             position: relative;
             z-index: 10;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 32px 24px;
         }
@@ -124,19 +117,19 @@
             justify-content: space-between;
             align-items: center;
             padding: 16px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.06);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
             margin-bottom: 60px;
         }
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
         .logo-icon {
-            width: 36px;
-            height: 36px;
-            background: linear-gradient(135deg, #6366f1, #a78bfa);
-            border-radius: 8px;
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, #dc2626, #ef4444);
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -147,18 +140,16 @@
         .logo-text {
             font-size: 1.1rem;
             font-weight: 700;
-            letter-spacing: -0.5px;
-            color: #f0f0f0;
+            letter-spacing: -0.3px;
+            color: #f0f4f8;
         }
-        .logo-text span {
-            color: #818cf8;
-        }
+        .logo-text span { color: #ef4444; }
         .header-cta {
-            background: rgba(255,255,255,0.06);
+            background: rgba(255,255,255,0.05);
             border: 1px solid rgba(255,255,255,0.08);
             border-radius: 40px;
             padding: 10px 24px;
-            color: #ccc;
+            color: #b0b8c0;
             font-size: 0.8rem;
             font-weight: 500;
             cursor: pointer;
@@ -166,8 +157,8 @@
             text-decoration: none;
         }
         .header-cta:hover {
-            background: rgba(255,255,255,0.1);
-            border-color: rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.15);
             color: white;
         }
         
@@ -179,53 +170,54 @@
             margin-bottom: 60px;
             padding: 40px 0;
             opacity: 0;
-            animation: fadeUp 0.8s ease forwards;
+            animation: fadeUp 0.9s ease forwards;
         }
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
         .hero-badge {
-            background: rgba(99,102,241,0.12);
-            border: 1px solid rgba(99,102,241,0.15);
+            background: rgba(220,38,38,0.1);
+            border: 1px solid rgba(220,38,38,0.15);
             border-radius: 40px;
-            padding: 4px 16px;
+            padding: 6px 18px;
             font-size: 0.7rem;
-            color: #a78bfa;
-            margin-bottom: 20px;
+            color: #f87171;
+            margin-bottom: 24px;
             letter-spacing: 2px;
+            text-transform: uppercase;
         }
         .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4.2rem);
+            font-size: clamp(2.8rem, 7vw, 4.5rem);
             font-weight: 800;
-            line-height: 1.05;
-            margin-bottom: 16px;
-            color: #f0f0f0;
+            line-height: 1.08;
+            margin-bottom: 20px;
+            color: #f0f4f8;
         }
         .hero h1 .highlight {
-            background: linear-gradient(135deg, #818cf8, #a78bfa);
+            background: linear-gradient(135deg, #dc2626, #ef4444, #f97316);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
         .hero p {
             font-size: 1.1rem;
-            color: #888;
-            max-width: 560px;
-            line-height: 1.7;
-            margin-bottom: 28px;
+            color: #8a929a;
+            max-width: 580px;
+            line-height: 1.8;
+            margin-bottom: 32px;
         }
         .hero-buttons {
             display: flex;
-            gap: 12px;
+            gap: 14px;
             flex-wrap: wrap;
             justify-content: center;
         }
         .btn-primary {
-            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            background: linear-gradient(135deg, #dc2626, #ef4444);
             border: none;
             border-radius: 40px;
-            padding: 12px 28px;
+            padding: 12px 30px;
             color: white;
             font-weight: 600;
             font-size: 0.9rem;
@@ -234,19 +226,19 @@
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 20px rgba(99,102,241,0.2);
+            gap: 10px;
+            box-shadow: 0 4px 20px rgba(220,38,38,0.2);
         }
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 35px rgba(99,102,241,0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 35px rgba(220,38,38,0.35);
         }
         .btn-secondary {
             background: rgba(255,255,255,0.04);
             border: 1px solid rgba(255,255,255,0.08);
             border-radius: 40px;
-            padding: 12px 28px;
-            color: #ccc;
+            padding: 12px 30px;
+            color: #b0b8c0;
             font-weight: 500;
             font-size: 0.9rem;
             cursor: pointer;
@@ -254,62 +246,61 @@
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
         .btn-secondary:hover {
             background: rgba(255,255,255,0.06);
-            border-color: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.18);
             color: white;
         }
         
         .tagline-section {
             text-align: center;
-            padding: 20px 0 40px;
+            padding: 24px 0 40px;
             border-top: 1px solid rgba(255,255,255,0.04);
             border-bottom: 1px solid rgba(255,255,255,0.04);
             margin-bottom: 60px;
         }
         .tagline-section .quote {
             font-size: 1.2rem;
-            color: #a78bfa;
+            color: #f87171;
             font-weight: 400;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
         .tagline-section .quote i {
             color: #fbbf24;
-            margin: 0 8px;
+            margin: 0 6px;
+            font-size: 0.9rem;
         }
         
         .stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 20px;
-            max-width: 700px;
+            max-width: 680px;
             margin: 0 auto 60px auto;
             text-align: center;
         }
         .stat-item {
-            padding: 16px;
-            background: rgba(255,255,255,0.03);
+            padding: 20px;
+            background: rgba(255,255,255,0.02);
             border-radius: 16px;
-            border: 1px solid rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.05);
             transition: all 0.3s;
         }
         .stat-item:hover {
-            border-color: rgba(99,102,241,0.2);
-            background: rgba(255,255,255,0.05);
+            border-color: rgba(220,38,38,0.15);
+            background: rgba(255,255,255,0.04);
         }
         .stat-number {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            color: #f0f0f0;
+            color: #f0f4f8;
         }
-        .stat-number .highlight {
-            color: #818cf8;
-        }
+        .stat-number .highlight { color: #ef4444; }
         .stat-label {
             font-size: 0.75rem;
-            color: #666;
+            color: #6a727a;
             margin-top: 4px;
         }
         
@@ -319,55 +310,53 @@
         }
         .section-title .label {
             font-size: 0.7rem;
-            color: #818cf8;
+            color: #ef4444;
             text-transform: uppercase;
             letter-spacing: 3px;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             display: block;
         }
         .section-title h2 {
             font-size: 1.8rem;
             font-weight: 700;
-            color: #f0f0f0;
+            color: #f0f4f8;
             margin-bottom: 6px;
         }
         .section-title p {
-            color: #666;
+            color: #6a727a;
             font-size: 0.95rem;
         }
         
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
+            gap: 50px;
             margin-bottom: 60px;
             align-items: start;
         }
         .about-text p {
-            color: #888;
-            line-height: 1.8;
+            color: #8a929a;
+            line-height: 1.9;
             margin-bottom: 16px;
             font-size: 0.95rem;
         }
         .about-text .highlight-text {
-            color: #a78bfa;
+            color: #f87171;
             font-weight: 500;
         }
         .about-text .location {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(99,102,241,0.08);
-            border: 1px solid rgba(99,102,241,0.1);
+            background: rgba(220,38,38,0.06);
+            border: 1px solid rgba(220,38,38,0.08);
             border-radius: 40px;
-            padding: 6px 16px;
+            padding: 6px 18px;
             font-size: 0.8rem;
-            color: #aaa;
+            color: #b0b8c0;
             margin-top: 8px;
         }
-        .about-text .location i {
-            color: #fbbf24;
-        }
+        .about-text .location i { color: #fbbf24; }
         .about-skills {
             display: flex;
             flex-wrap: wrap;
@@ -375,23 +364,23 @@
             margin-top: 20px;
         }
         .skill-tag {
-            background: rgba(99,102,241,0.08);
-            border: 1px solid rgba(99,102,241,0.1);
+            background: rgba(220,38,38,0.06);
+            border: 1px solid rgba(220,38,38,0.08);
             border-radius: 40px;
-            padding: 6px 16px;
+            padding: 6px 18px;
             font-size: 0.75rem;
-            color: #aaa;
+            color: #b0b8c0;
             transition: all 0.3s;
         }
         .skill-tag:hover {
-            border-color: rgba(99,102,241,0.3);
+            border-color: rgba(220,38,38,0.25);
             color: white;
         }
         .about-image {
             background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.05);
             border-radius: 20px;
-            padding: 40px;
+            padding: 44px 32px;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -402,11 +391,11 @@
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #6366f1, #a78bfa);
+            background: linear-gradient(135deg, #dc2626, #ef4444);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 700;
             color: white;
             margin-bottom: 16px;
@@ -414,16 +403,16 @@
         .about-image .name {
             font-size: 1.2rem;
             font-weight: 600;
-            color: #f0f0f0;
+            color: #f0f4f8;
         }
         .about-image .role {
             font-size: 0.85rem;
-            color: #888;
+            color: #8a929a;
             margin-top: 4px;
         }
         .about-image .location-badge {
             font-size: 0.75rem;
-            color: #a78bfa;
+            color: #f87171;
             margin-top: 8px;
             display: flex;
             align-items: center;
@@ -434,167 +423,142 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255,255,255,0.06);
+            background: rgba(255,255,255,0.05);
             border: 1px solid rgba(255,255,255,0.08);
             border-radius: 40px;
-            padding: 8px 20px;
-            color: #ccc;
+            padding: 8px 22px;
+            color: #b0b8c0;
             text-decoration: none;
             font-size: 0.8rem;
             transition: all 0.3s;
         }
         .about-image .github-link:hover {
-            background: rgba(255,255,255,0.1);
-            border-color: rgba(99,102,241,0.2);
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(220,38,38,0.2);
             color: white;
         }
         
         .achievements-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            gap: 24px;
             margin-bottom: 60px;
         }
         .achievement-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.06);
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
             border-radius: 20px;
-            padding: 28px 24px;
+            padding: 30px 26px;
             transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        .achievement-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(99,102,241,0.03), transparent);
-            opacity: 0;
-            transition: opacity 0.4s;
-        }
-        .achievement-card:hover::before {
-            opacity: 1;
         }
         .achievement-card:hover {
-            border-color: rgba(99,102,241,0.2);
-            transform: translateY(-4px);
-            background: rgba(255,255,255,0.05);
+            border-color: rgba(220,38,38,0.15);
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.04);
             box-shadow: 0 12px 40px rgba(0,0,0,0.3);
         }
         .achievement-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            background: rgba(99,102,241,0.1);
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: rgba(220,38,38,0.08);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.1rem;
-            color: #818cf8;
-            margin-bottom: 14px;
+            font-size: 1.2rem;
+            color: #ef4444;
+            margin-bottom: 16px;
             transition: all 0.3s;
         }
         .achievement-card:hover .achievement-icon {
-            background: rgba(99,102,241,0.2);
+            background: rgba(220,38,38,0.15);
         }
         .achievement-card h3 {
             font-size: 1rem;
             font-weight: 600;
             margin-bottom: 6px;
-            color: #f0f0f0;
+            color: #f0f4f8;
         }
         .achievement-card p {
             font-size: 0.85rem;
-            color: #888;
-            line-height: 1.6;
+            color: #8a929a;
+            line-height: 1.7;
         }
         .achievement-badge {
             display: inline-block;
-            background: rgba(251,191,36,0.1);
-            border: 1px solid rgba(251,191,36,0.15);
+            background: rgba(251,191,36,0.08);
+            border: 1px solid rgba(251,191,36,0.1);
             border-radius: 40px;
-            padding: 2px 10px;
+            padding: 3px 12px;
             font-size: 0.55rem;
             color: #fbbf24;
-            margin-top: 8px;
-        }
-        .achievement-spec {
-            display: inline-block;
-            background: rgba(99,102,241,0.1);
-            border: 1px solid rgba(99,102,241,0.15);
-            border-radius: 40px;
-            padding: 2px 12px;
-            font-size: 0.55rem;
-            color: #818cf8;
-            margin-top: 8px;
+            margin-top: 10px;
         }
         
         .impact-section {
             background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.05);
             border-radius: 24px;
-            padding: 40px;
+            padding: 44px 40px;
             margin-bottom: 60px;
             text-align: center;
         }
         .impact-section h2 {
             font-size: 1.4rem;
             font-weight: 700;
-            color: #f0f0f0;
+            color: #f0f4f8;
             margin-bottom: 16px;
         }
         .impact-section p {
-            color: #888;
-            max-width: 600px;
+            color: #8a929a;
+            max-width: 620px;
             margin: 0 auto;
-            line-height: 1.7;
+            line-height: 1.8;
         }
         .impact-section .highlight-text {
-            color: #a78bfa;
+            color: #f87171;
             font-weight: 500;
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 20px;
             margin-bottom: 60px;
         }
         .service-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.06);
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
             border-radius: 16px;
-            padding: 24px;
+            padding: 24px 20px;
             text-align: center;
             transition: all 0.3s;
         }
         .service-card:hover {
-            border-color: rgba(99,102,241,0.15);
-            background: rgba(255,255,255,0.05);
+            border-color: rgba(220,38,38,0.12);
+            background: rgba(255,255,255,0.04);
         }
         .service-card .icon {
-            font-size: 1.5rem;
-            color: #818cf8;
+            font-size: 1.6rem;
+            color: #ef4444;
             margin-bottom: 12px;
             display: block;
         }
         .service-card h4 {
             font-size: 0.9rem;
             font-weight: 600;
-            color: #f0f0f0;
+            color: #f0f4f8;
             margin-bottom: 4px;
         }
         .service-card p {
             font-size: 0.75rem;
-            color: #666;
+            color: #6a727a;
+            line-height: 1.5;
         }
         
         .cta-banner {
-            background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(168,85,247,0.04));
-            border: 1px solid rgba(99,102,241,0.1);
+            background: linear-gradient(135deg, rgba(220,38,38,0.06), rgba(239,68,68,0.03));
+            border: 1px solid rgba(220,38,38,0.08);
             border-radius: 24px;
             padding: 48px 40px;
             text-align: center;
@@ -602,23 +566,23 @@
             transition: all 0.3s;
         }
         .cta-banner:hover {
-            border-color: rgba(99,102,241,0.2);
+            border-color: rgba(220,38,38,0.15);
         }
         .cta-banner h2 {
             font-size: 1.6rem;
             font-weight: 700;
-            color: #f0f0f0;
+            color: #f0f4f8;
             margin-bottom: 8px;
         }
         .cta-banner p {
-            color: #888;
+            color: #8a929a;
             margin-bottom: 24px;
         }
         .github-btn {
-            background: #1a1a1a;
-            border: 1px solid rgba(255,255,255,0.1);
+            background: #161b22;
+            border: 1px solid rgba(255,255,255,0.08);
             border-radius: 40px;
-            padding: 12px 32px;
+            padding: 12px 34px;
             color: white;
             font-weight: 600;
             font-size: 0.9rem;
@@ -630,7 +594,7 @@
             gap: 10px;
         }
         .github-btn:hover {
-            border-color: rgba(99,102,241,0.3);
+            border-color: rgba(220,38,38,0.25);
             transform: translateY(-2px);
             box-shadow: 0 8px 30px rgba(0,0,0,0.3);
         }
@@ -638,14 +602,11 @@
         .footer {
             text-align: center;
             padding-top: 32px;
-            border-top: 1px solid rgba(255,255,255,0.06);
+            border-top: 1px solid rgba(255,255,255,0.05);
             font-size: 0.75rem;
-            color: #555;
+            color: #5a626a;
         }
-        .footer .brand {
-            color: #818cf8;
-            font-weight: 600;
-        }
+        .footer .brand { color: #ef4444; font-weight: 600; }
         .footer-social {
             display: flex;
             justify-content: center;
@@ -653,29 +614,26 @@
             margin-bottom: 16px;
         }
         .footer-social a {
-            color: #555;
+            color: #5a626a;
             font-size: 1rem;
             transition: all 0.3s;
         }
-        .footer-social a:hover {
-            color: #a78bfa;
-        }
+        .footer-social a:hover { color: #f87171; }
         .footer .quote {
             font-size: 0.65rem;
-            color: #444;
+            color: #4a525a;
             margin-top: 8px;
-            font-style: italic;
         }
         
         @media (max-width: 768px) {
             .container { padding: 20px 16px; }
-            .header { flex-direction: column; gap: 12px; padding-bottom: 20px; }
+            .header { flex-direction: column; gap: 14px; padding-bottom: 20px; }
             .hero h1 { font-size: 2.2rem; }
-            .about-grid { grid-template-columns: 1fr; gap: 24px; }
+            .about-grid { grid-template-columns: 1fr; gap: 30px; }
             .about-image { order: -1; }
             .cta-banner { padding: 32px 20px; }
             .stats { grid-template-columns: 1fr 1fr; }
-            .impact-section { padding: 24px; }
+            .impact-section { padding: 28px 20px; }
         }
         @media (max-width: 480px) {
             .hero-buttons { flex-direction: column; align-items: center; }
@@ -688,19 +646,15 @@
 </head>
 <body>
 
-<!-- Background -->
 <div class="bg-layer"></div>
 <div class="stars" id="starsContainer"></div>
 <div class="grid-overlay"></div>
 <div class="floating-orb orb-1"></div>
 <div class="floating-orb orb-2"></div>
-
-<!-- Scroll Progress -->
 <div class="scroll-progress" id="scrollProgress"></div>
 
 <div class="container">
 
-    <!-- HEADER -->
     <header class="header">
         <div class="logo">
             <div class="logo-icon">⚡</div>
@@ -711,11 +665,10 @@
         </a>
     </header>
 
-    <!-- HERO -->
     <section class="hero">
-        <div class="hero-badge">⚡ Ethical Hacker · Cyber Security</div>
-        <h1>"I don't break systems. <span class="highlight">I test them.</span>"</h1>
-        <p>ShadowForge1137 — hacker etis dari Bangka Belitung dengan kekuatan <strong>10 Botnet + 10 VPS</strong> untuk pengujian keamanan.</p>
+        <div class="hero-badge">🇮🇩 Cyber Security · Indonesia</div>
+        <h1>I don't break systems. <span class="highlight">I test them.</span></h1>
+        <p>ShadowForge1137 adalah peneliti keamanan cyber dari Bangka Belitung yang berfokus pada pengujian ketahanan web dan server.</p>
         <div class="hero-buttons">
             <a href="#achievements" class="btn-primary">
                 <i class="fas fa-trophy"></i> Lihat Pencapaian
@@ -726,23 +679,13 @@
         </div>
     </section>
 
-    <!-- TAGLINE -->
     <div class="tagline-section">
         <div class="quote">
-            <i class="fas fa-quote-left"></i> "Dari Bangka Belitung, menguji batas keamanan dunia maya." <i class="fas fa-quote-right"></i>
+            <i class="fas fa-quote-left"></i> Dari Bangka Belitung, menguji batas keamanan dunia maya. <i class="fas fa-quote-right"></i>
         </div>
     </div>
 
-    <!-- STATS -->
     <div class="stats">
-        <div class="stat-item">
-            <div class="stat-number"><span class="highlight">10</span></div>
-            <div class="stat-label">Botnet Active</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number"><span class="highlight">10</span></div>
-            <div class="stat-label">VPS Server</div>
-        </div>
         <div class="stat-item">
             <div class="stat-number"><span class="highlight">25</span>+</div>
             <div class="stat-label">Negara Terdampak</div>
@@ -751,47 +694,56 @@
             <div class="stat-number"><span class="highlight">50</span>+</div>
             <div class="stat-label">Server Diuji</div>
         </div>
+        <div class="stat-item">
+            <div class="stat-number"><span class="highlight">15</span>+</div>
+            <div class="stat-label">Bug Ditemukan</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number"><span class="highlight">1</span></div>
+            <div class="stat-label">Web Perusahaan Down</div>
+        </div>
     </div>
 
-    <!-- ABOUT -->
     <div class="section-title">
         <span class="label">✦ About</span>
         <h2>ShadowForge1137</h2>
-        <p>Hacker etis dengan 10 Botnet & 10 VPS untuk pengujian keamanan</p>
+        <p>Peneliti Keamanan Cyber dari Bangka Belitung</p>
     </div>
 
     <div class="about-grid">
         <div class="about-text">
             <p>
-                Saya adalah <span class="highlight-text">ShadowForge1137</span>, seorang <span class="highlight-text">hacker etis</span> 
-                yang berasal dari <span class="highlight-text">Bangka Belitung</span>. Dengan kekuatan 
-                <span class="highlight-text">10 botnet</span> dan <span class="highlight-text">10 VPS</span>, 
-                saya melakukan pengujian keamanan untuk berbagai server dan web di seluruh dunia.
+                Saya adalah <span class="highlight-text">ShadowForge1137</span>, seorang peneliti keamanan cyber asal 
+                <span class="highlight-text">Bangka Belitung, Indonesia</span>. Dengan ketertarikan mendalam pada 
+                <span class="highlight-text">keamanan web dan server</span>, saya menghabiskan waktu untuk mempelajari 
+                celah-celah keamanan dan menguji ketahanan sistem digital.
             </p>
             <p>
-                Saya telah <span class="highlight-text">menggemparkan dunia</span> dengan pengujian DDoS yang massive 
-                dan temuan celah keamanan di berbagai situs ternama. Setiap pengujian yang saya lakukan bertujuan untuk 
-                <span class="highlight-text">mengidentifikasi celah keamanan</span> sebelum dieksploitasi oleh 
-                pihak yang tidak bertanggung jawab.
+                Sebagai <span class="highlight-text">peneliti keamanan</span>, saya percaya bahwa satu-satunya cara 
+                untuk membangun sistem yang aman adalah dengan terus menguji batas-batasnya. Setiap celah yang ditemukan 
+                adalah pelajaran berharga untuk membangun pertahanan yang lebih baik.
+            </p>
+            <p>
+                Dari <span class="highlight-text">Bangka Belitung</span>, saya berkomitmen untuk berkontribusi dalam 
+                dunia keamanan siber dan membantu melindungi infrastruktur digital dari ancaman yang semakin kompleks.
             </p>
             <div class="location">
                 <i class="fas fa-map-marker-alt"></i> Bangka Belitung, Indonesia
             </div>
             <div class="about-skills">
-                <span class="skill-tag">⚡ DDoS Testing</span>
-                <span class="skill-tag">🔍 SQL Injection</span>
-                <span class="skill-tag">🛡️ Penetration Testing</span>
-                <span class="skill-tag">📊 Vulnerability Assessment</span>
-                <span class="skill-tag">🔒 Cyber Security</span>
-                <span class="skill-tag">⚡ Ethical Hacking</span>
+                <span class="skill-tag">Keamanan Web</span>
+                <span class="skill-tag">Pengujian Server</span>
+                <span class="skill-tag">Analisis Celah</span>
+                <span class="skill-tag">Penetration Testing</span>
+                <span class="skill-tag">Keamanan Siber</span>
             </div>
         </div>
         <div class="about-image">
             <div class="avatar-large">⚡</div>
             <div class="name">ShadowForge1137</div>
-            <div class="role">Ethical Hacker · Cyber Security</div>
+            <div class="role">Peneliti Keamanan Cyber</div>
             <div class="location-badge">
-                <i class="fas fa-map-marker-alt"></i> Bangka Belitung
+                <i class="fas fa-map-marker-alt"></i> Bangka Belitung, Indonesia
             </div>
             <a href="https://github.com/shadowforge1137" target="_blank" class="github-link">
                 <i class="fab fa-github"></i> github.com/shadowforge1137
@@ -799,96 +751,90 @@
         </div>
     </div>
 
-    <!-- IMPACT -->
     <div class="impact-section">
-        <h2>🌍 10 Botnet + 10 VPS — Kekuatan Pengujian</h2>
+        <h2>🇮🇩 Dari Bangka Belitung untuk Dunia</h2>
         <p>
-            Dengan <span class="highlight-text">10 botnet</span> dan <span class="highlight-text">10 VPS</span>, 
-            ShadowForge1137 mampu melakukan pengujian DDoS dan penetrasi secara massive. 
-            Dari Bangka Belitung, saya membuktikan bahwa <span class="highlight-text">keamanan siber adalah hal yang krusial</span> 
-            bagi semua pihak — baik perusahaan kecil maupun besar.
+            ShadowForge1137 telah <span class="highlight-text">menggemparkan dunia maya</span> dengan temuan celah 
+            keamanan di berbagai platform besar. <span class="highlight-text">Bangka Belitung</span> bukan hanya 
+            surga wisata, tetapi juga rumah bagi peneliti keamanan cyber yang siap menguji batas-batas keamanan 
+            digital dan membantu menciptakan ekosistem digital yang lebih aman.
         </p>
     </div>
 
-    <!-- ACHIEVEMENTS -->
     <div class="section-title" id="achievements">
         <span class="label">✦ Achievements</span>
-        <h2>Pencapaian Terbesar</h2>
-        <p>Hasil testing yang telah mengguncang dunia maya</p>
+        <h2>Pencapaian</h2>
+        <p>Hasil penelitian dan pengujian keamanan yang telah dilakukan</p>
     </div>
 
     <div class="achievements-grid">
         <div class="achievement-card">
-            <div class="achievement-icon"><i class="fas fa-network-wired"></i></div>
-            <h3>10 Botnet + 10 VPS</h3>
-            <p>Kekuatan penuh untuk pengujian DDoS dan penetrasi testing ke berbagai server.</p>
-            <div class="achievement-spec">⚡ 10 Botnet · 10 VPS</div>
-            <div class="achievement-badge">⭐ Achievement</div>
-        </div>
-        <div class="achievement-card">
             <div class="achievement-icon"><i class="fas fa-globe"></i></div>
             <h3>25 Negara Tidak Bisa Akses</h3>
-            <p>Berhasil membuat satu web milik perusahaan tidak bisa diakses oleh 25 negara di dunia.</p>
-            <div class="achievement-badge">⭐ Achievement</div>
+            <p>Berhasil menemukan celah keamanan yang membuat satu web milik perusahaan tidak bisa diakses oleh 25 negara di dunia.</p>
+            <div class="achievement-badge">Pencapaian</div>
         </div>
         <div class="achievement-card">
             <div class="achievement-icon"><i class="fas fa-flag"></i></div>
             <h3>Membobol Situs Negara Asing</h3>
-            <p>Berhasil membobol situs milik negara asing dan menemukan celah keamanan kritis.</p>
-            <div class="achievement-badge">⭐ Achievement</div>
+            <p>Berhasil mengidentifikasi dan melaporkan celah keamanan kritis pada situs milik negara asing.</p>
+            <div class="achievement-badge">Pencapaian</div>
+        </div>
+        <div class="achievement-card">
+            <div class="achievement-icon"><i class="fas fa-bug"></i></div>
+            <h3>Menemukan Bug di Platform Besar</h3>
+            <p>Menemukan dan melaporkan kerentanan keamanan di beberapa platform digital ternama di dunia.</p>
+            <div class="achievement-badge">Pencapaian</div>
         </div>
     </div>
 
-    <!-- SERVICES -->
     <div class="section-title">
         <span class="label">✦ Services</span>
         <h2>Layanan Keamanan</h2>
-        <p>Testing yang saya tawarkan untuk menjaga keamanan sistem Anda</p>
+        <p>Layanan yang saya tawarkan untuk membantu menjaga keamanan sistem</p>
     </div>
 
     <div class="services-grid">
         <div class="service-card">
-            <span class="icon"><i class="fas fa-bolt"></i></span>
-            <h4>DDoS Stress Test</h4>
-            <p>Pengujian ketahanan server dengan 10 botnet</p>
-        </div>
-        <div class="service-card">
-            <span class="icon"><i class="fas fa-database"></i></span>
-            <h4>SQL Injection Test</h4>
-            <p>Pengujian kerentanan database</p>
-        </div>
-        <div class="service-card">
             <span class="icon"><i class="fas fa-shield-alt"></i></span>
-            <h4>Vulnerability Assessment</h4>
-            <p>Analisis celah keamanan menyeluruh</p>
+            <h4>Pengujian Keamanan</h4>
+            <p>Pengujian ketahanan server dan aplikasi web</p>
+        </div>
+        <div class="service-card">
+            <span class="icon"><i class="fas fa-search"></i></span>
+            <h4>Analisis Celah</h4>
+            <p>Identifikasi kerentanan keamanan secara mendalam</p>
         </div>
         <div class="service-card">
             <span class="icon"><i class="fas fa-lock"></i></span>
             <h4>Penetration Testing</h4>
-            <p>Simulasi serangan untuk menguji pertahanan</p>
+            <p>Simulasi serangan untuk menguji pertahanan sistem</p>
         </div>
         <div class="service-card">
             <span class="icon"><i class="fas fa-server"></i></span>
-            <h4>Server Hardening</h4>
-            <p>Penguatan keamanan server</p>
+            <h4>Penguatan Server</h4>
+            <p>Rekomendasi perbaikan keamanan server</p>
         </div>
         <div class="service-card">
             <span class="icon"><i class="fas fa-code"></i></span>
-            <h4>Web Security Audit</h4>
-            <p>Audit keamanan aplikasi web</p>
+            <h4>Audit Keamanan Web</h4>
+            <p>Pemeriksaan keamanan aplikasi web secara menyeluruh</p>
+        </div>
+        <div class="service-card">
+            <span class="icon"><i class="fas fa-chart-line"></i></span>
+            <h4>Konsultasi Keamanan</h4>
+            <p>Konsultasi strategi keamanan untuk organisasi</p>
         </div>
     </div>
 
-    <!-- CTA -->
     <div class="cta-banner">
         <h2>Lihat Portofolio Lengkap</h2>
-        <p>Kunjungi GitHub saya untuk melihat lebih banyak proyek dan kontribusi</p>
+        <p>Kunjungi GitHub untuk melihat lebih banyak proyek dan kontribusi</p>
         <a href="https://github.com/shadowforge1137" target="_blank" class="github-btn">
             <i class="fab fa-github"></i> Kunjungi GitHub
         </a>
     </div>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-social">
             <a href="https://github.com/shadowforge1137" target="_blank"><i class="fab fa-github"></i></a>
@@ -896,13 +842,12 @@
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
         </div>
         <p>© 2025 <span class="brand">ShadowForge1137</span> · Cyber Security</p>
-        <p class="quote">"I don't break systems. I test them." — From Bangka Belitung to the World</p>
+        <p class="quote">I don't break systems. I test them. — From Bangka Belitung to the World</p>
     </footer>
 
 </div>
 
 <script>
-    // ========== STARS ==========
     const starsContainer = document.getElementById('starsContainer');
     for (let i = 0; i < 120; i++) {
         const star = document.createElement('div');
@@ -917,7 +862,6 @@
         starsContainer.appendChild(star);
     }
 
-    // ========== SCROLL PROGRESS ==========
     window.addEventListener('scroll', function() {
         const scrollTop = window.scrollY;
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -925,7 +869,6 @@
         document.getElementById('scrollProgress').style.width = progress + '%';
     });
 
-    // ========== SMOOTH SCROLL ==========
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -936,7 +879,6 @@
         });
     });
 
-    // ========== COUNTER ANIMATION ==========
     const statNumbers = document.querySelectorAll('.stat-number');
     let counted = false;
 
